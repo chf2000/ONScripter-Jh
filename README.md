@@ -10,6 +10,23 @@ Onscripter是一个用来解析NScripter脚本的第三方开源Galgame游戏引
 
 * Added a SW/HW renderer switch.
 
+## Dependency
+clang  
+GNU make    
+SDL2  
+lua  
+sdl2-image  
+sdl2-ttf  
+sdl2-mixer  
+bz2 
+fontconfig  
+libjpeg  
+libogg  
+libvorbis-dev
+
+
+
+
 ## Compile
 
 * macOS：
