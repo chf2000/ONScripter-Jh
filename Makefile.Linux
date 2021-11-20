@@ -70,9 +70,9 @@ DEFS += -DUSE_BUILTIN_EFFECTS -DUSE_BUILTIN_LAYER_EFFECTS
 #DEFS += -DENABLE_1BYTE_CHAR -DFORCE_1BYTE_CHAR
 
 
-# for GNU g++
-CC = g++ 
-LD = g++ -o
+# for clang
+CC = clang++ 
+LD = clang++ -o
 
 #CFLAGS = -g -Wall -pipe -c $(INCS) $(DEFS)
 CFLAGS = -std=c++11 -O3 -Wall -fomit-frame-pointer -pipe -c $(INCS) $(DEFS) $(EXT_FLAGS)
