@@ -1,12 +1,14 @@
 # ONScripter-Jh
-This is a fork of [ONScripter-Jh] aimed at fixing bugs on modern platforms and adding more functionalities.
-This repo is forked from public archived https://github.com/fybmain/ONScripter-Jh.git by fybmain due to in inaccessibility of original repo on bitbucket.org.
+This is a fork of [ONScripter-Jh] aimed at fixing bugs on modern platforms and adding more functionalities.  
+This repo is forked from public archived https://github.com/fybmain/ONScripter-Jh.git by fybmain due to in inaccessibility of original repo on bitbucket.org.   
 
 LISCENCE:[GPLv2][]
 
 Onscripter是一个用来解析NScripter脚本的第三方开源Galgame游戏引擎，主要由Ogapee（<ogapee@aqua.dti2.ne.jp>）开发维护。
 
 [ONScripter-Jh][]修改自[ONScripter][]，旨在在兼容原版[Onscripter][]的前提下，添加中文支持，提高性能，增加功能，发起人为h j（<https://bitbucket.org/jh10001/>）。
+
+* Added a SW/HW renderer switch.
 
 ## Compile
 
@@ -16,19 +18,23 @@ $ make -f Makefile.MacOSX
 $ ./onscripter
 ```
 
-## Test
-* macOS
-OS Version: macOS 12.0.1
-Toolchain: Apple clang version 13.0.0 (clang-1300.0.29.3)
-Target: x86_64-apple-darwin21.1.0
-Thread model: posix
-SDK: MacOSX12.0.sdk
-Status: Pass
+## Tests
+* macOS  
+OS Version: macOS 12.0.1 Darwin21.1.0  
+Toolchain: Apple clang version 13.0.0 (clang-1300.0.29.3)  
+Target: x86_64-apple-darwin21.1.0  
+Thread model: posix  
+SDK: MacOSX12.0.sdk  
+Status: Pass  
 
-* Linux
-Status: Pending
+* Linux  
+OS Version: Ubuntu 20.04.3 LTS GNU/Linux 5.10.60.1-microsoft-standard-WSL2  
+Toolchain:clang version 10.0.0-4ubuntu1  
+Target: x86_64-pc-linux-gnu  
+Thread model: posix  
+Status: Pass  
 
-## TODO
+## TODO  
 * Test on more platforms.
 * Add more functionalities.
 
