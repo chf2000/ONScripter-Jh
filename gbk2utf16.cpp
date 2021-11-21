@@ -23972,25 +23972,25 @@ static uint16_t gbk_2_utf16_org[][2] = {
 };
 
 void GBK2UTF16::init() {
-	strcpy(space, "ã€€");
-	strcpy(minus, "ï¼");
-	strcpy(bracket,"ã€ã€‘");
-	strcpy(num_str, "ï¼ï¼‘ï¼’ï¼“ï¼”ï¼•ï¼–ï¼—ï¼˜ï¼™");
-	strcpy(DEFAULT_START_KINSOKU, "ã€ã€ï¼‰ï¼½ï½ã€ã€‚ï¼Œï¼Žã€‚ï¼Ÿï¼ãƒ½ãƒ¾ã‚ã‚žã€…ãƒ¼");
-	strcpy(DEFAULT_END_KINSOKU, "ã€Œã€Žï¼ˆï¼»ï½›");
-	strcpy(DEFAULT_SAVE_MENU_NAME, "ï¼œä¿å­˜ï¼ž");
-	strcpy(DEFAULT_LOAD_MENU_NAME, "ï¼œè½½å…¥ï¼ž");
-	strcpy(DEFAULT_SAVE_ITEM_NAME, "ä¹¦ç­¾");
-	strcpy(MESSAGE_SAVE_EXIST, "%s%sã€€%sæœˆ%sæ—¥%sæ—¶%såˆ†");
-	strcpy(MESSAGE_SAVE_EMPTY, "%s%sã€€â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”");
-	strcpy(MESSAGE_SAVE_CONFIRM, "ä¿å­˜åœ¨%s%sï¼Ÿ");
-	strcpy(MESSAGE_LOAD_CONFIRM, "è¯»å–%s%sï¼Ÿ");
-	strcpy(MESSAGE_RESET_CONFIRM, "è¿”å›žæ ‡é¢˜ï¼Ÿ");
-	strcpy(MESSAGE_END_CONFIRM, "é€€å‡ºæ¸¸æˆï¼Ÿ");
-	strcpy(MESSAGE_YES, "æ˜¯");
-	strcpy(MESSAGE_NO, "å¦");
-	strcpy(MESSAGE_OK, "ç¡®å®š");
-	strcpy(MESSAGE_CANCEL, "å–æ¶ˆ");
+	strcpy(space, "¡¡");
+	strcpy(minus, "£­");
+	strcpy(bracket,"¡¾¡¿");
+	strcpy(num_str, "£°£±£²£³£´£µ£¶£·£¸£¹");
+	strcpy(DEFAULT_START_KINSOKU, "¡¹¡»£©£Ý£ý¡¢¡££¬£®¡££¿£¡©c©d©f©g¡©©`");
+	strcpy(DEFAULT_END_KINSOKU, "¡¸¡º£¨£Û£û");
+	strcpy(DEFAULT_SAVE_MENU_NAME, "£¼±£´æ£¾");
+	strcpy(DEFAULT_LOAD_MENU_NAME, "£¼ÔØÈë£¾");
+	strcpy(DEFAULT_SAVE_ITEM_NAME, "ÊéÇ©");
+	strcpy(MESSAGE_SAVE_EXIST, "%s%s¡¡%sÔÂ%sÈÕ%sÊ±%s·Ö");
+	strcpy(MESSAGE_SAVE_EMPTY, "%s%s¡¡¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª");
+	strcpy(MESSAGE_SAVE_CONFIRM, "±£´æÔÚ%s%s£¿");
+	strcpy(MESSAGE_LOAD_CONFIRM, "¶ÁÈ¡%s%s£¿");
+	strcpy(MESSAGE_RESET_CONFIRM, "·µ»Ø±êÌâ£¿");
+	strcpy(MESSAGE_END_CONFIRM, "ÍË³öÓÎÏ·£¿");
+	strcpy(MESSAGE_YES, "ÊÇ");
+	strcpy(MESSAGE_NO, "·ñ");
+	strcpy(MESSAGE_OK, "È·¶¨");
+	strcpy(MESSAGE_CANCEL, "È¡Ïû");
 
 	gbk_2_utf16 = new uint16_t[CODINGRIGHT - CODINGLEFT + 1];
 	utf16_2_gbk_4e = new uint16_t[0x9fA5-0x4E00+1];

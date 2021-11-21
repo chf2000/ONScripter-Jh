@@ -191,7 +191,9 @@ void ONScripter::initSDL()
 
 #if defined(_WIN32) || defined(WIN32)
     int window_flag = SDL_WINDOW_SHOWN;
-#elif defined(MACOSX) || (defined(LINUX) && !defined(ANDROID))
+#elif defined(MACOSX)
+    int window_flag = SDL_WINDOW_METAL | SDL_WINDOW_SHOWN;
+#elif defined(LINUX) && !defined(ANDROID)
     int window_flag = SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN;
 #else
     int window_flag = SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN | SDL_WINDOW_BORDERLESS;
