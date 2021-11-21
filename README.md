@@ -8,7 +8,7 @@ Onscripter是一个用来解析NScripter脚本的第三方开源Galgame游戏引
 
 [ONScripter-Jh][]修改自[ONScripter][]，旨在在兼容原版[Onscripter][]的前提下，添加中文支持，提高性能，增加功能，发起人为h j（<https://bitbucket.org/jh10001/>）。
 
-* Added a SW/HW renderer switch.
+* Added a SW/HW renderer switch. ONScripter-Jh will use the software renderer of SDL2 by default due to terrible flickering under any hardware renderer such as OpenGL, Vulkan and Metal. Bugs under any hardware renderer will not be fixed.
 
 ## Dependency
 clang  
@@ -23,8 +23,6 @@ fontconfig
 libjpeg  
 libogg  
 libvorbis-dev
-
-
 
 
 ## Compile
@@ -52,8 +50,7 @@ Thread model: posix
 Status: Pass  
 
 ## TODO  
-* Test on more platforms.
-* Add more functionalities.
+* Test on Arm based Macs.
 
 [GPLv2]: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 [ONScripter]: https://onscripter.osdn.jp/onscripter.html
