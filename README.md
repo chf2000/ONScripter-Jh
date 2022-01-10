@@ -26,6 +26,7 @@ sdl2-ttf
 sdl2-mixer  
 bz2  
 fontconfig  
+smpeg2  
 libjpeg  
 libogg  
 libvorbis-dev

@@ -190,7 +190,7 @@ void ONScripter::initSDL()
     SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "linear");
 
 #if defined(_WIN32) || defined(WIN32)
-    int window_flag = SDL_WINDOW_SHOWN;
+    int window_flag = SDL_WINDOW_VULKAN | SDL_WINDOW_SHOWN;
 #elif defined(MACOSX)
     int window_flag = SDL_WINDOW_METAL | SDL_WINDOW_SHOWN;
 #elif defined(LINUX) && !defined(ANDROID)

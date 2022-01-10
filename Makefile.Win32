@@ -28,4 +28,4 @@ RM = del
 
 TARGET = onscripter$(EXESUFFIX) sarconv$(EXESUFFIX) nsaconv$(EXESUFFIX)
 
-!include Makefile.onscripter
+!include Makefile.onscripter_windows
