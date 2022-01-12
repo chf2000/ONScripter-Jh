@@ -88,7 +88,7 @@ Status: Pass
 * Windows  
 OS Version: Windows 11 21H2 version 22000.318  
 Toolchain: MSVC v143 - VS2022  
-Target: x86_win32  
+Target: x86 win32 & x64 win32  
 SDK: Windows 10 SDK 10.0.19041.0  
 Status: Pass  
 
