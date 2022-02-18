@@ -91,6 +91,8 @@ public:
     void setCompatibilityMode();
     void set_accelerated_render_mode(bool s);
     bool get_accelerated_render_mode();
+    void set_custom_screen_device_height(int x);
+    void set_custom_screen_device_width(int x);
     void setFontCache();
     void setDebugLevel(int debug);
     void enableButtonShortCut();
@@ -338,6 +340,8 @@ private:
     bool fullscreen_mode;
     bool window_mode;
     bool accelerated_render_mode;
+    int custom_screen_device_width;
+    int custom_screen_device_height;
 
     // start-up options
     bool cdaudio_flag;

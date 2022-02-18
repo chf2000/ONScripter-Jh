@@ -106,7 +106,8 @@ void optionHelp()
     printf( "      --enc:sjis\tuse sjis coding script\n");
     printf( "      --debug:1\t\tprint debug info\n");
     printf( "      --fontcache\tcache default font\n");
-    printf( "  -SW, -HW\t\tusing software or hardware renderer, using software renderer by default\n");
+    printf( "  -SW, -HW\t\tuse software or hardware renderer (software renderer is used by default)\n");
+    printf( "  -W,-H\t\toverride window size provided by nscript manually\n");
     printf( "  -h, --help\t\tshow this help and exit\n");
     printf( "  -v, --version\t\tshow the version information and exit\n");
     exit(0);
@@ -243,6 +244,16 @@ void parseOption(int argc, char *argv[]) {
             }
             else if ( !strcmp( argv[0]+1, "SW" ) ){
                 ons.set_accelerated_render_mode(false);
+            }
+            else if ( !strcmp( argv[0]+1, "H" ) ){
+                argc--;
+                argv++;
+                ons.set_custom_screen_device_height(atoi(argv[0]));
+            }
+            else if ( !strcmp( argv[0]+1, "W" ) ){
+                argc--;
+                argv++;
+                ons.set_custom_screen_device_width(atoi(argv[0]));
             }
             else if ( !strcmp( argv[0]+1, "-cdaudio" ) ){
                 ons.enableCDAudio();

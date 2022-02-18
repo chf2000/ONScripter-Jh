@@ -187,7 +187,7 @@ void ONScripter::initSDL()
     SDL_GL_SetAttribute(SDL_GL_ALPHA_SIZE, 8);
     SDL_GL_SetAttribute(SDL_GL_BUFFER_SIZE, 32);
     SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 0);
-    SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "linear");
+    SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "best");
 
 #if defined(_WIN32) || defined(WIN32)
     int window_flag = SDL_WINDOW_VULKAN | SDL_WINDOW_SHOWN;
@@ -206,7 +206,14 @@ void ONScripter::initSDL()
 #else
     int window_x = 0, window_y = 0;
 #endif //SDL_VERSION_ATLEAST(2,0,0)
-    window = SDL_CreateWindow(NULL, window_x, window_y, screen_device_width, screen_device_height, window_flag);
+    if(custom_screen_device_height == -1 || custom_screen_device_width == -1)
+    {
+        window = SDL_CreateWindow(NULL, window_x, window_y, screen_device_width, screen_device_height, window_flag);
+    }
+    else 
+    {
+        window = SDL_CreateWindow(NULL, window_x, window_y, custom_screen_device_width, custom_screen_device_height, window_flag);
+    }
     if (window == NULL) {
         utils::printError("Could not create window: %s\n", SDL_GetError());
         exit(-1);
@@ -351,6 +358,8 @@ ONScripter::ONScripter()
     fullscreen_mode = false;
     accelerated_render_mode = false;
     window_mode = false;
+    custom_screen_device_width = -1;
+    custom_screen_device_height = -1;
     sprite_info  = new AnimationInfo[MAX_SPRITE_NUM];
     sprite2_info = new AnimationInfo[MAX_SPRITE2_NUM];
     texture_info = new AnimationInfo[MAX_TEXTURE_NUM];
@@ -1017,6 +1026,16 @@ void ONScripter::set_accelerated_render_mode(bool s)
 bool ONScripter::get_accelerated_render_mode()
 {
     return accelerated_render_mode;
+}
+
+void ONScripter::set_custom_screen_device_height(int x)
+{
+    custom_screen_device_height = x;
+}
+
+void ONScripter::set_custom_screen_device_width(int x)
+{
+    custom_screen_device_width = x;
 }
 
 void ONScripter::executeLabel()
